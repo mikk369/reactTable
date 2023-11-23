@@ -1,0 +1,10 @@
+{
+  
+    "orders": [
+      { "date": "2023-01-01", "food_name": "Pizza", "price": 15.99, "hold_price": 5.00, "user_id": 1 },
+      { "date": "2023-01-01", "food_name": "Milk", "price": 0.99, "hold_price": 5.00, "user_id": 1 },
+      { "date": "2023-01-01", "food_name": "Burger", "price": 5.99, "hold_price": 5.00, "user_id": 1 },
+      { "date": "2023-01-01", "food_name": "Salat", "price": 1.99, "hold_price": 5.00, "user_id": 1 },
+      { "date": "2023-01-01", "food_name": "Bread", "price": 0.50, "hold_price": 5.00, "user_id": 1 }
+    ]
+  }
