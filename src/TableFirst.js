@@ -25,7 +25,7 @@ export default function TableFirst({ dates, filteredData, showToitColumn, setSho
       <tbody>
         {dates.map((date, index) => {
           const dateItems = filteredData.filter((item) => item.date === date);
-          const total = dateItems.reduce((acc, curr) => acc + curr.price, 0);
+          const total = dateItems.reduce((acc, curr) => acc + parseFloat(curr.price), 0).toFixed(2);
           const holdPrice = total / 2;
 
           return (
