@@ -1,9 +1,8 @@
 import React from 'react';
 
 export default function RenderRows(dateItems, showToitColumn, index, date) {
-  const total = dateItems.reduce((acc, curr) => acc + curr.price, 0);
+  const total = dateItems.reduce((acc, curr) => acc + parseFloat(curr.price), 0).toFixed(2);
   const holdPrice = total / 2;
-  const holdPriceTotal = dateItems.reduce((acc, curr) => acc + holdPrice, 0).toFixed(2);
 
   return (
     <React.Fragment key={index}>

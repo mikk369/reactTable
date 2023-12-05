@@ -12,7 +12,7 @@ require_once '../db/db_connect.php';
 $query = "SELECT users.*, orders.*
           FROM users
           JOIN orders ON users.id = orders.user_id
-          WHERE users.id = 1";
+          WHERE users.id = 2";
 
 $result = mysqli_query($connection, $query);
 

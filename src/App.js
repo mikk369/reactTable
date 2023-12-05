@@ -14,7 +14,7 @@ function App() {
 }
 
 function Table() {
-  const [loggedInUserId] = useState('1');
+  const [loggedInUserId] = useState('2');
   const [showToitColumn, setShowToitColumn] = useState(true);
   const [filteredData, setFilteredData] = useState([]);
   const [dates, setDates] = useState([]);
@@ -24,11 +24,9 @@ function Table() {
       try {
         const response = await axios.get('http://localhost:8000/api/getproducts.php');
         const data = response.data;
-        console.log(data);
-        const filteredData = data.filter((item) => item.id === loggedInUserId);
-        const dates = [...new Set(filteredData.map((item) => item.date))];
+        const dates = [...new Set(data.map((item) => item.date))];
 
-        setFilteredData(filteredData);
+        setFilteredData(data);
         setDates(dates);
       } catch (error) {
         console.error('Error fetching data:', error);
